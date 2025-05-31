@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+
+<html lang="ja">
+  <head>
+    <title>Ruby で素因数分解</title>
+    <meta charset="utf-8">
+    <link href="../../style.css" type="text/css" rel="stylesheet">
+    <script src="../../main.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Kosugi+Maru&display=swap" rel="stylesheet">
+  </head>
+
+  <body>
+    <!-- header -->
+    <header id="header">
+      <div class="header_container">
+        <a href="../../index.html" id="main_title">
+          しおまっくぶろぐ(仮)
+        </a>
+
+        <nav class="header_links">
+          <a href="../../migiue/about.html">About</a>
+          <a href="../../migiue/tags.html">Tags</a>
+          <a href="../../migiue/terms.html">Terms</a>
+        </nav>
+      </div>
+    </header>
+    <!-- /header -->
+
+    <!-- main -->
+    <article>
+      <div class="big_container">
+        <!-- コンテナ内に記事を書く -->
+        <h2>Ruby で素因数分解</h2>
+        <img src="images/main.png" alt="写真の読み込みに失敗しました。">
+        <p>
+          Ruby で素因数分解の関数を作りました。
+        </p>
+        <div class="code-container">
+          <button class="copy-btn" onclick="copyCode(this)">Copy</button>
+<pre>
+<code>def prime_factors(n)
+  factors = []
+  i = 2
+  while i * i <= n
+    while n % i == 0
+      factors << i
+      n /= i
+    end
+    i += 1
+  end
+  factors << n if n > 1
+  factors
+end
+
+# テスト例
+puts prime_factors(60).inspect  # => [2, 2, 3, 5]
+puts prime_factors(97).inspect  # => [97] (素数)
+puts prime_factors(1).inspect   # => [] (1は素因数なし)</code>
+</pre>
+        </div>
+        <p>
+          先に2で割るようにした方が、高速化できるかもしれません。<br>
+          計算量なども考えてみたいです。
+        </p>
+        <!-- 記事編集ここまで -->
+      </div>
+    </article>
+    <!-- /main -->
+
+    <!-- footer -->
+    <footer>
+      <label onclick="scrollToTop()">ページ先頭に戻る</label>
+      <h3>&copy; 2025. <a href="../../index.html">shiomacair</a></h3>
+    </footer>
+    <!-- /footer -->
+  </body>
+</html>
