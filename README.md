@@ -1,3 +1,3 @@
 # github-blog
-my blog.
-コンテンツを追加
+my blog.<br>
+https://shiomacair.github.io/github-blog/
