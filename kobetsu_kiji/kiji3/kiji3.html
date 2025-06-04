@@ -11,7 +11,7 @@
 
       gtag('config', 'G-MKDLGYDG8X');
     </script>
-    <title>Ruby で素因数分解</title>
+    <title>Google アナリティクス導入</title>
     <meta charset="utf-8">
     <link href="../../style.css" type="text/css" rel="stylesheet">
     <script src="../../main.js"></script>
@@ -39,37 +39,28 @@
     <article>
       <div class="big_container">
         <!-- コンテナ内に記事を書く -->
-        <h2>Ruby で素因数分解</h2>
-        <img src="images/main.png" alt="写真の読み込みに失敗しました。">
+        <h2>Google アナリティクス導入</h2>
+        <img src="images/main.jpeg" alt="写真の読み込みに失敗しました。">
         <p>
-          Ruby で素因数分解の関数を作りました。
+          Google アナリティクスを導入してみました。<br>
+          コードはこんな感じのをhtmlに入れるといいらしいです (まだよくわかってない)。
         </p>
         <div class="code-container">
           <button class="copy-btn" onclick="copyCode(this)">Copy</button>
 <pre>
-<code>def prime_factors(n)
-  factors = []
-  i = 2
-  while i * i <= n
-    while n % i == 0
-      factors << i
-      n /= i
-    end
-    i += 1
-  end
-  factors << n if n > 1
-  factors
-end
+<code>&lt;!-- Google tag (gtag.js) --&gt;
+&lt;script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXX"&gt;&lt;/script&gt;
+&lt;script&gt;
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
 
-# テスト例
-puts prime_factors(60).inspect  # => [2, 2, 3, 5]
-puts prime_factors(97).inspect  # => [97] (素数)
-puts prime_factors(1).inspect   # => [] (1は素因数なし)</code>
+  gtag('config', 'G-XXXXXXX');
+&lt;/script&gt;</code>
 </pre>
         </div>
         <p>
-          先に2で割るようにした方が、高速化できるかもしれません。<br>
-          計算量なども考えてみたいです。
+          使い方がもう少しわかったら追記するかも。
         </p>
         <!-- 記事編集ここまで -->
       </div>
