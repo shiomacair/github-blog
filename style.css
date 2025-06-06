@@ -228,6 +228,15 @@ a {
   outline: none;
 }
 
+a.taglink {
+  color: #008B8B; /* 全てのリンクの文字色を青に */
+  margin-right: 0.6rem; /* 余白を空ける */
+}
+
+a.taglink:hover {
+  color: darkblue; /* ホバー時の色を変更 */
+}
+
 h1 {
   font-size: min(5vh, 2rem);
 }
