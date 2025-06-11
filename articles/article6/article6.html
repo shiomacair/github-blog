@@ -11,7 +11,7 @@
 
       gtag('config', 'G-MKDLGYDG8X');
     </script>
-    <title>サンプル記事</title>
+    <title>Mac の date コマンドがなんか変</title>
     <meta charset="utf-8">
     <link href="../../style.css" type="text/css" rel="stylesheet">
     <script src="../../main.js"></script>
@@ -39,10 +39,32 @@
     <article>
       <div class="big_container">
         <!-- コンテナ内に記事を書く -->
-        <h2>サンプル記事</h2>
-        <img src="images/NoImage.jpeg" alt="写真の読み込みに失敗しました。">
+        <h2>Mac の date コマンドがなんか変</h2>
+        <img src="images/date.jpeg" alt="写真の読み込みに失敗しました。">
         <p>
-          システムを更新したので、テスト記事を作りました。
+          date は現在の日時を表示してくれるコマンドです。
+          通常は以下のように使えます (Docker で構築した Ubuntu 22.04 の実行結果です)。
+        </p>
+        <div class="code-container">
+          <button class="copy-btn" onclick="copyCode(this)">Copy</button>
+<pre>
+<code>date
+# => Wed Jun 11 10:20:30 JST 2025</code>
+</pre>
+        </div>
+        <p>
+          一方、Mac での実行結果はこうなりました (M4 Mac で実行しました。)。
+        </p>
+        <div class="code-container">
+          <button class="copy-btn" onclick="copyCode(this)">Copy</button>
+<pre>
+<code>date
+# => #午後</code>
+</pre>
+        </div>
+        <p>
+          #午後 としか表示されませんね...<br>
+          調べた感じバグっぽいので、早く修正されるといいですね。
         </p>
         <!-- 記事編集ここまで -->
       </div>
