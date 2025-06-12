@@ -275,7 +275,7 @@ video {
 /* 画面幅が小さいときの変更 */
 @media (max-width: 768px) {
   a.container, .big_container, .small_container {
-    width: 95%;
+    width: 85%;
   }
 
   a.container h2 {
