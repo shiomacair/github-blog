@@ -135,7 +135,7 @@ a.container p {
   background: #white;
   border-radius: 12px;
   width: 60%;
-  padding: 0rem 1rem;
+  padding: 1rem 2rem;
   margin-bottom: 2rem;
 }
 
@@ -284,5 +284,9 @@ video {
 
   a.container p {
     font-size: min(1.3vh, 0.8rem);
+  }
+
+  a.container img {
+    max-width: 30%; 
   }
 }
