@@ -1,10 +1,9 @@
 function scrollToTop() {
   window.scrollTo({ top: 0, behavior: 'smooth' });
-  console.log("JavaScriptが正しく動作しました");
 }
 
 function copyCode(button) {
-  const codeBlock = button.nextElementSibling; // <pre>タグ
+  const codeBlock = button.nextElementSibling;
   const codeText = codeBlock.innerText;
   
   navigator.clipboard.writeText(codeText).then(() => {
@@ -16,3 +15,4 @@ function copyCode(button) {
     console.error("コピーに失敗しました:", err);
   });
 }
+
