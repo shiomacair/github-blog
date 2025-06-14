@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+
+<html lang="ja">
+  <head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-MKDLGYDG8X"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-MKDLGYDG8X');
+    </script>
+    <title>GitHub のコマンドまとめ</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="../style.css" type="text/css" rel="stylesheet">
+    <script src="../main.js"></script>
+  </head>
+
+  <body>
+    <!-- header -->
+    <header id="header">
+      <div class="header_container">
+        <a href="../index.html" id="main_title">
+          ShioMacAirのブログ
+        </a>
+
+        <nav class="header_links">
+          <a href="../about.html">About</a>
+          <a href="../tags.html">Tags</a>
+          <a href="../terms.html">Terms</a>
+        </nav>
+      </div>
+    </header>
+    <!-- /header -->
+
+    <!-- main -->
+    <article>
+      <h5 class="date_t">2025/06/13</h5>
+      <h2>GitHub のコマンドまとめ</h2>
+      <div style="height: 1em;"></div>
+      <img src="../images/github.jpeg" alt="写真の読み込みに失敗しました。">
+      <!-- ここから本文 -->
+      <p>
+        GitHub の基本的なコマンドです。
+        古い記事だと checkout などの使い方が現在と違っていたりするので、2025/06時点で正常に動作するコマンドをまとめました。
+      </p>
+      <p>
+        1. リポジトリを作って最初にやること
+      </p>
+      <div class="code-container">
+        <button class="copy-btn" onclick="copyCode(this)">Copy</button>
+<pre>
+<code>## 新しいプロジェクトで最初にやる
+# clone
+git clone git@github.com:アカウント名/リポ名.git
+
+# リポに移動
+cd リポ名
+
+# 初期化
+git init</code>
+</pre>
+      </div>
+      <p>
+        2. 内容を更新する前にやること (普段はここからやる)
+      </p>
+      <div class="code-container">
+        <button class="copy-btn" onclick="copyCode(this)">Copy</button>
+<pre>
+<code># pull
+git pull origin main
+
+# ブランチを確認 (最初は main のみ)
+git branch
+
+# 新しいブランチを作って変更
+git switch -c ブランチ名</code>
+</pre>
+      </div>
+      <p>
+        ここまでやったら、プログラムの編集を行います。<br>
+        <br>
+        3. 更新した内容を GitHub に反映させる
+      </p>
+      <div class="code-container">
+        <button class="copy-btn" onclick="copyCode(this)">Copy</button>
+<pre>
+<code># add
+git add .
+
+# add した内容を commit
+git commit -m "コメント"
+
+# commit した内容を push
+git pull origin main
+git push -u origin ブランチ名 # => GitHub のページで Compare & pull request</code>
+</pre>
+      </div>
+      <p>
+        あとは GitHub のページで操作できます。<br>
+        <br>
+        4. main ブランチで pull
+      </p>
+      <div class="code-container">
+        <button class="copy-btn" onclick="copyCode(this)">Copy</button>
+<pre>
+<code># main ブランチに変更
+git switch main
+
+# pull
+git pull origin main</code>
+</pre>
+      </div>
+      <p>
+        これで GitHub に上がっている内容と、ローカルの内容が同じになるはずです。
+      </p>
+      <a a href="https://amzn.to/3ZsssiF" target="_blank" rel="noopener noreferrer" class="container">
+        <img src="../images/yasashii_git.jpeg" alt="写真の読み込みに失敗しました。">
+        <div class="text-area">
+          <h2>いちばんやさしいGit&GitHubの教本</h2>
+          <p>
+            説明が丁寧で分かりやすい本です。<br>
+            GitHub だけでなく、Git についても詳しく書いてあるので、Heroku などを使う予定の人にもおすすめです。
+          </p>
+        </div>
+      </a>
+      <p>
+        変更を削除したりする方法については、また別でいつか書きます。
+      </p>
+      <!-- ここまで -->
+    </article>
+    <!-- /main -->
+
+    <!-- footer -->
+    <footer>
+      <label onclick="scrollToTop()">ページ先頭に戻る</label>
+      <h3>&copy; 2025. <a href="../index.html">shiomacair</a></h3>
+    </footer>
+    <!-- /footer -->
+  </body>
+</html>
+
