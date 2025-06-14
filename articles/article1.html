@@ -11,26 +11,25 @@
 
       gtag('config', 'G-MKDLGYDG8X');
     </script>
-    <title>Trinity で De novo assembly する</title>
+    <title>Trinity で <i>De novo</i> assembly する</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="../../style.css" type="text/css" rel="stylesheet">
-    <script src="../../main.js"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Kosugi+Maru&display=swap" rel="stylesheet">
+    <link href="../style.css" type="text/css" rel="stylesheet">
+    <script src="../main.js"></script>
   </head>
 
   <body>
     <!-- header -->
     <header id="header">
       <div class="header_container">
-        <a href="../../index.html" id="main_title">
+        <a href="../index.html" id="main_title">
           ShioMacAirのブログ
         </a>
 
         <nav class="header_links">
-          <a href="../../migiue/about.html">About</a>
-          <a href="../../migiue/tags.html">Tags</a>
-          <a href="../../migiue/terms.html">Terms</a>
+          <a href="../about.html">About</a>
+          <a href="../tags.html">Tags</a>
+          <a href="../terms.html">Terms</a>
         </nav>
       </div>
     </header>
@@ -38,18 +37,19 @@
 
     <!-- main -->
     <article>
-      <div class="big_container">
-        <!-- コンテナ内に記事を書く -->
-        <h2>Trinity で <i>De novo</i> assembly する</h2>
-        <img src="images/trinity.jpeg" alt="写真の読み込みに失敗しました。">
-        <p>
-          Docker を使用して Trinity の実行環境を作成し、<i>De novo</i> assembly を行う手順を解説します。<br>
-          Trinity の GitHub は<a href="https://github.com/trinityrnaseq/trinityrnaseq" target="_blank" rel="noopener noreferrer">こちら</a>。<br>
-          前提として、Docker がすでに使える状態を想定しています。<br>
-          作業用のフォルダに Dockerfile を作成して、以下をコピペします。
-        </p>
-        <div class="code-container">
-          <button class="copy-btn" onclick="copyCode(this)">Copy</button>
+      <h5 class="date_t">2025/05/31</h5>
+      <h2>Trinity で <i>De novo</i> assembly する</h2>
+      <div style="height: 1em;"></div>
+      <img src="../images/trinity.jpeg" alt="写真の読み込みに失敗しました。">
+      <!-- ここから本文 -->
+      <p>
+        Docker を使用して Trinity の実行環境を作成し、<i>De novo</i> assembly を行う手順を解説します。<br>
+        Trinity の GitHub は<a href="https://github.com/trinityrnaseq/trinityrnaseq" target="_blank" rel="noopener noreferrer" class="taglink">こちら</a>。<br>
+        前提として、Docker がすでに使える状態を想定しています。<br>
+        作業用のフォルダに Dockerfile を作成して、以下をコピペします。
+      </p>
+      <div class="code-container">
+        <button class="copy-btn" onclick="copyCode(this)">Copy</button>
 <pre>
 <code>FROM ubuntu:22.04
 
@@ -93,22 +93,22 @@ WORKDIR /data
 # デフォルトのCMD(引数なしで使えるように)
 CMD ["bash"]</code>
 </pre>
-        </div>
-        <p>
-          Dockerfile が作成できたら、以下のコマンドで build します。
-        </p>
-        <div class="code-container">
-          <button class="copy-btn" onclick="copyCode(this)">Copy</button>
+      </div>
+      <p>
+        Dockerfile が作成できたら、以下のコマンドで build します。
+      </p>
+      <div class="code-container">
+        <button class="copy-btn" onclick="copyCode(this)">Copy</button>
 <pre>
 <code>docker build -t trinity-rnaseq .</code>
 </pre>
-        </div>
-        <p>
-          エラーが出なければ、Trinity のインストールができています。<br>
-          実行は以下のコマンドで行います。
-        </p>
-        <div class="code-container">
-          <button class="copy-btn" onclick="copyCode(this)">Copy</button>
+      </div>
+      <p>
+        エラーが出なければ、Trinity のインストールができています。<br>
+        実行は以下のコマンドで行います。
+      </p>
+      <div class="code-container">
+        <button class="copy-btn" onclick="copyCode(this)">Copy</button>
 <pre>
 <code>docker run -it --rm \
 -v "$(pwd)":/data \
@@ -116,23 +116,23 @@ trinity-rnaseq \
 Trinity --seqType fq \
         --left /data/sample_R1.fastq \
         --right /data/sample_R2.fastq \
-        --CPU 4 \
-        --max_memory 8G</code>
+        --CPU 8 \
+        --max_memory 12G</code>
 </pre>
-        </div>
-        <p>
-          fasta ファイルが出力されたら成功です。
-        </p>
-        <!-- 記事編集ここまで -->
       </div>
+      <p>
+        fasta ファイルが出力されたら成功です。
+      </p>
+      <!-- ここまで -->
     </article>
     <!-- /main -->
 
     <!-- footer -->
     <footer>
       <label onclick="scrollToTop()">ページ先頭に戻る</label>
-      <h3>&copy; 2025. <a href="../../index.html">shiomacair</a></h3>
+      <h3>&copy; 2025. <a href="../index.html">shiomacair</a></h3>
     </footer>
     <!-- /footer -->
   </body>
 </html>
+

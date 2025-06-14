@@ -14,23 +14,22 @@
     <title>Google アナリティクス導入</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="../../style.css" type="text/css" rel="stylesheet">
-    <script src="../../main.js"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Kosugi+Maru&display=swap" rel="stylesheet">
+    <link href="../style.css" type="text/css" rel="stylesheet">
+    <script src="../main.js"></script>
   </head>
 
   <body>
     <!-- header -->
     <header id="header">
       <div class="header_container">
-        <a href="../../index.html" id="main_title">
+        <a href="../index.html" id="main_title">
           ShioMacAirのブログ
         </a>
 
         <nav class="header_links">
-          <a href="../../migiue/about.html">About</a>
-          <a href="../../migiue/tags.html">Tags</a>
-          <a href="../../migiue/terms.html">Terms</a>
+          <a href="../about.html">About</a>
+          <a href="../tags.html">Tags</a>
+          <a href="../terms.html">Terms</a>
         </nav>
       </div>
     </header>
@@ -38,16 +37,17 @@
 
     <!-- main -->
     <article>
-      <div class="big_container">
-        <!-- コンテナ内に記事を書く -->
-        <h2>Google アナリティクス導入</h2>
-        <img src="images/ga.jpeg" alt="写真の読み込みに失敗しました。">
-        <p>
-          Google アナリティクスを導入してみました。<br>
-          コードはこんな感じのをhtmlに入れるといいらしいです (まだよくわかってない)。
-        </p>
-        <div class="code-container">
-          <button class="copy-btn" onclick="copyCode(this)">Copy</button>
+      <h5 class="date_t">2025/06/04</h5>
+      <h2>Google アナリティクス導入</h2>
+      <div style="height: 1em;"></div>
+      <img src="../images/ga.jpeg" alt="写真の読み込みに失敗しました。">
+      <!-- ここから本文 -->
+      <p>
+        Google アナリティクスを導入してみました。<br>
+        コードはこんな感じのをhtmlに入れるといいらしいです (まだよくわかってない)。
+      </p>
+      <div class="code-container">
+        <button class="copy-btn" onclick="copyCode(this)">Copy</button>
 <pre>
 <code>&lt;!-- Google tag (gtag.js) --&gt;
 &lt;script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXX"&gt;&lt;/script&gt;
@@ -59,20 +59,20 @@
   gtag('config', 'G-XXXXXXX');
 &lt;/script&gt;</code>
 </pre>
-        </div>
-        <p>
-          使い方がもう少しわかったら追記するかも。
-        </p>
-        <!-- 記事編集ここまで -->
       </div>
+      <p>
+        使い方がもう少しわかったら追記するかも。
+      </p>
+      <!-- ここまで -->
     </article>
     <!-- /main -->
 
     <!-- footer -->
     <footer>
       <label onclick="scrollToTop()">ページ先頭に戻る</label>
-      <h3>&copy; 2025. <a href="../../index.html">shiomacair</a></h3>
+      <h3>&copy; 2025. <a href="../index.html">shiomacair</a></h3>
     </footer>
     <!-- /footer -->
   </body>
 </html>
+
